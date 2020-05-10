@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="list-head">用户信息</view>
+<view class="list-box">
+  <view class="list-li" wx:for="{{list_data}}" wx:key="item">
+    <view class="list-uid">
+      <text>{{item.usid}}</text>
+    </view>
+    <view class="list-uname">
+      <text>{{item.uname}}</text>
+    </view>
+    <view class="list-phone">
+      <text>{{item.phone}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- indicator-dots： 是否显示面板指示点   autoplay：是否自动切换 interval：自动切换时间间隔  duration：滑动动画时长-->
+  <view class="view_swiper"> 
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="myswiper">
+      <block wx:for="{{banner_list}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item.pic_url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='floortitle'>
+    <text class='floortitlemoreicon'>热卖商品</text>
+    <image src="/images/more.png" class="show_more"/>
+  </view>
+
+  <view class="hotgoodcontainer">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <block wx:for="{{goodlist}}" wx:key="*this">
+        <view  class="scroll-view-item">
+          <view class="hotitem">
+            <image src="{{item.pic_url}}" class="productimg"/>
+            <text class="gtitle">{{item.gname}}</text>
+          </view>
+        </view>
+      </block>
+      <view  class="scroll-view-item">
+        <view class="hotitem">
+          <image src="/images/more.png" class="productimg"/>
+          <text class="gtitle">更多</text>
+          </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='floortitle'>
+    <text class='goodinfotitle'>商品信息</text>
+  </view>
+  <view class="goodcontainer">
+    <block wx:for="{{goodlist}}" wx:key="*this">
+      <view class="gooditem">
+        <image src="{{item.pic_url}}" class="productimg" />
+        <text class="gtitle">{{item.gname}}</text>
+        <view class="gop">
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="gprice">{{item.price}}</view>
+          </picker>
+          <image src="/images/cart.png" class="addcart" bindtap="showshadow" />
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--  底部弹出式菜 -->
+<!-- 遮罩层 -->
+<view class="shadowview" wx:if="{{chooseShadow}}" bindtap='hideModal'></view>
+<!-- 上滑高度 -->
+<view class='choosentop' wx:if="{{chooseShadow}}" animation='{{animationData}}'>
+<!-- 内容 -->
+  <view class="container-box">
+    这里为内容
+  </view>
+</view>
+
+<!--底部菜单-->
+<view class="flex fix_nav_wp">
+  <view class="nav_link" bindtap='' data-id="home">
+    <button class="defalut_btn on_cor">
+      <image src='{{home}}' class="plus_ico" />   
+      <text class="txt">主页</text>
+    </button>
+  </view>
+
+  <view class="nav_link" bindtap='bindDefault'>
+    <button class="defalut_btn on_cor">
+      <!-- <text class="tip_tip">2</text>-->
+      <image src='{{msg}}' class="plus_ico" />   
+      <text class="txt">最新资讯</text>
+    </button>
+  </view>
+  
+  <view class="nav_link" bindtap='bindContact' data-id="contact">
+    <button class="defalut_btn on_cor">
+      <!--<text class="tip_tip">2</text> -->
+      <image src='{{contact}}' class="plus_ico" />   
+      <text class="txt">关于我们</text>
+    </button>
+  </view>
+  <view class="nav_link" bindtap='bindDefault' data-id="server">
+    <button class="defalut_btn on_cor">
+      <image src='{{server}}' class="plus_ico" />   
+      <text class="txt">咨询反馈</text>
+    </button>
+  </view>
+  <view class="nav_link" bindtap='bindMe' data-id="me">
+    <button class="defalut_btn on_cor">
+      <image src='{{me}}' class="plus_ico" />   
+      <text class="txt">个人主页</text>
+    </button>
+  </view>
+</view>
+

@@ -1,0 +1,16 @@
+/**index.wxss**/
+.container{
+  align-items: center; /*垂直居中*/
+}
+
+.reg{
+  margin-top:20px;
+}
+
+.container button{
+  width: 98vw;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  background: greenyellow;
+}

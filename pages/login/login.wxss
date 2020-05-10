@@ -1,0 +1,49 @@
+/**index.wxss**/
+.container{
+  align-items: center; /*垂直居中*/
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.useraccount {
+  margin-top: 80px;
+}
+
+.userpwd{
+  margin-top: 20px;
+} 
+
+input{
+  border:1px solid #6EB2DF;
+  width: 98vw;
+  height: 36px;
+  font-size: 12px;
+}
+
+.userbtn{
+  margin-top:20px;
+}
+
+.usertips {
+  margin-top: 10px;
+}
+
+.usertips-info {
+  color: red;
+  padding-left:2px;
+  font-size: 12px;
+}

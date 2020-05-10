@@ -1,0 +1,221 @@
+/**index.wxss**/
+.container {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.view_swiper{
+  display: block;
+  width: 100%;
+  height: 260px;
+}
+
+.myswiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image{
+  display: block;
+  height: 100%;
+  width:100%;
+}
+
+.floortitle{
+  width: 100%;
+  display:flex;
+  height:34px;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 13px;
+  font-size:14px;
+  color: #FFF;
+  background-color: slategrey;
+  border-top: 2px solid #e2e2e3;
+  border-bottom: 1px solid #e2e2e3;
+}
+
+.floortitlemoreicon {
+  padding-left:2px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.hotgoodcontainer {
+  height: 300rpx;
+  width: 100%;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+
+.scroll-view-item{
+  width: 240rpx;
+  height: 260rpx;
+  margin-top: 10rpx;
+  display: inline-block;
+  border: 0.5px solid #e2e2e3;
+  margin-right: 10rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.hotitem{
+  width:  100%;
+  height: 100%;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:12px;
+}
+
+.hotimg {
+  width: 100%;
+  height: 200rpx;
+}
+
+.show_more {
+  float: right;
+  width: 32px;
+  height: 32px;
+}
+
+.goodcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin-bottom:  40px;
+}
+
+.goodinfotitle {
+  display:flex;
+  width:100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 1em;
+}
+
+.gooditem{
+    width:33.333333%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-size:12px;
+    box-sizing:border-box;
+    border: 0.5px solid #e2e2e3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.productimg{
+   width:80px;
+   height:80px;
+}
+
+.gtitle {
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  padding-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.gtitle::before {
+  content:'\00A0' /*空格*/
+}
+
+.gop {
+  width: 100%;
+  height: 30px;
+  display:flex;
+  margin-top: 5px;
+  flex-direction: row;
+  justify-content : space-between;
+  align-items:center;
+}
+
+.gprice {
+  color: red;
+  font-weight: bolder;
+  font-size: larger;
+  margin-top: 4px;
+  float: left;
+  padding-left:6px;
+  line-height: 30px;
+}
+
+.gprice::before{
+  content: '\00A5'; /*&yen */
+  margin-right: 1px;
+}
+
+.addcart {
+  width: 28px;
+  height: 28px;
+  float: right;
+  display: block;
+  padding-right: 4px;
+}
+
+/*底部选择*/
+/* 遮罩 */
+.shadowview{
+  width: 100%;
+  height: 1000%;
+  z-index: 80;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* 上滑高度 */
+.choosentop{
+  width: 100%;
+  height: 80%; 
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top-left-radius: 2rpx;
+  border-top-right-radius: 2rpx;
+  z-index: 98;
+  padding-inline: 10rpx;
+}
+
+/* 内容 */
+.container-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  z-index: 98;
+  font-size: 12px;
+}
+
+/* 底部菜单 */
+.flex{display:-webkit-flex;display:flex;width:100%;}
+.fix_nav_wp{padding:5rpx 0px;height:110rpx;position: fixed;left:0;bottom:0;background:#fff;border-top:1rpx solid #e5e5e5;z-index: 10}
+.fix_nav_wp .nav_link{flex:1;}
+.fix_nav_wp button{height:110rpx;display: flex;justify-content:space-between;align-items: center;padding:0;font-size:26rpx;
+flex-direction: column;color:#999;position: relative;}
+.tip_tip{position: absolute;right:25rpx;top:5rpx;min-width:28rpx;line-height:32rpx;
+height: 32rpx; padding:0 8rpx;color:#fff;background:#f00;border-radius:50em;border:1rpx solid #fff;}
+.fix_nav_wp .nav_link  image{width:80rpx;height:100rpx;}
+.fix_nav_wp .nav_link .txt{height:50rpx;line-height:40rpx;color: #c4c8cc;}
+/* 清楚按钮的默认样式  */
+.defalut_btn{background: transparent;border:none;overflow: visible;padding-left:0;padding-right:0;
+margin-left:0;margin-right:0;border-radius:0;}
+.defalut_btn:after{display: none;}
+.nav_link:hover .txt{color:coral}
+.user-motto{font-size:40rpx;color:#666; font-weight:bold; margin-top:40px;letter-spacing: 0.2em}

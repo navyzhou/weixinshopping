@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/shows/index",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/reg/reg",
+    "pages/back/back",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "晨枫",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
